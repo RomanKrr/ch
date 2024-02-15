@@ -1,0 +1,178 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+#root{
+    margin: 0 auto;    
+}
+.App{
+    width: 1200px;
+    margin: 20px 50px;
+}
+/* .list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+.if {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: black;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Щоб границя була включена в розмір елемента */
+}
+
+.if::before {
+    content: '';
+    position: absolute;
+    width: 100px; /* Ширина ромба */
+    height: 100px; /* Висота ромба */
+    border: 3px solid black; /* Ширина та колір границі */
+    transform: rotate(45deg);
+    display: flex; /* Застосування трансформації skew для рамки */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.if::after {
+    content: '';
+    position: absolute;
+    width: 100px; /* Ширина лінії */
+    height: 3px; /* Висота лінії */
+    background-color: black; /* Колір лінії */
+    top: 50%; /* Положення лінії по вертикалі відносно батьківського елемента */
+    left: 60%; /* Положення лінії по горизонталі відносно батьківського елемента */
+    transform: translate(-50%, -50%); /* Обертання лінії */
+}
+.pIf{
+  position: relative;
+}
+
+.pIf::before{
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 100px; /* Ширина лінії */
+  height: 3px; /* Висота лінії */
+  background-color: black; /* Колір лінії */
+  top: 50%; /* Положення лінії по вертикалі відносно батьківського елемента */
+  left: -68%; /* Положення лінії по горизонталі відносно батьківського елемента */
+  transform: translate(-50%, -50%); /* Обертання лінії */
+}
+
+
+/* .if::after{
+    content: '';
+    position: absolute; */
+    /* width: 100px; */
+    /* left: 669px; */
+    /* height: 3px;
+    background-color: black; */
+/* } */
+
+/* .rLine{
+    width: 100px; */
+    /* left: 669px; */
+    /* height: 3px;
+    background-color: black;
+    left: 669px; */
+    /* position: absolute; */
+/* } */
+
+
+
+
+
+
+
+
+
+
+
